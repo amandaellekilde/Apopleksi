@@ -36,7 +36,7 @@
 
 {#each report as item}
     <div>
-        <h6>{item.sys}</h6>
+        <p>{item.sys}</p>
         <p>{item.dia}</p>
     </div>
 {/each}

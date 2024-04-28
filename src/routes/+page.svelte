@@ -11,6 +11,6 @@
 <h1>Velkommen</h1>
 <p>Er du personale eller borger?</p>
 
-<button on:click={patient}>Patient</button>
+<button on:click={patient}>Borger</button>
 <button on:click={personale}>Personale</button>
 
