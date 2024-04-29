@@ -74,8 +74,8 @@
 </style>
 
 <div class="container">
-    <h1>Loginside</h1>
-    <input bind:value={username} type="text" placeholder="Indtast Email" />
-    <input bind:value={password} type="password" placeholder="Indtast Password" />
+    <h1>Personale-login</h1>
+    <input bind:value={username} type="text" placeholder="E-mail" />
+    <input bind:value={password} type="password" placeholder="Adgangskode" />
     <button on:click={login}>Login</button>
 </div>

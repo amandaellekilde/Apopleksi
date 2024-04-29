@@ -1,4 +1,4 @@
-<h1>Patientside</h1>
+<h1>Mine data</h1>
 
 <script>
     import { onMount } from 'svelte';
@@ -32,6 +32,14 @@
 </script>
 
 <input bind:value={sys} type="text" placeholder="Systolisk blodtryk" />
+<br>
 <input bind:value={dia} type="text" placeholder="Diastolisk blodtryk" />
+<br><br>
+<input type="text" placeholder="Vægt" />
+<br><br>
+<input type="text" placeholder="Vandladning" />
+<br><br>
+<input type="text" placeholder="Afføring" />
+<br><br>
 <button on:click={saveReport}>Send</button>
 

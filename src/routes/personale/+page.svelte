@@ -23,11 +23,13 @@
 
 </script>
 
-<h1>Personaleside</h1>
-<div><input bind:value={user} placeholder="user" /></div>
-<div><input bind:value={email} placeholder="email" /></div>
-<div><input bind:value={pass} placeholder="pass" /></div>
-
-<button on:click={addUser}>Opret bruger 1</button>
-
+<h1>Apopleksi-opfølgning</h1>
+<div><input bind:value={user} placeholder="Navn" /></div>
+<br>
+<div><input bind:value={email} placeholder="E-mail" /></div>
+<br>
+<div><input bind:value={pass} placeholder="Adgangskode" /></div>
+<br>
+<button on:click={addUser}>Opret bruger</button>
+<br><br>
 <button on:click={seeData}>Se patientdata</button>

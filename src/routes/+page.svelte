@@ -47,7 +47,7 @@
 
 <div class="container">
   <h1>Velkommen</h1>
-  <p>Vælg her om du er personale eller patient</p>
+  <p>Er du patient eller personale?</p>
   <button on:click={patient}>Patient</button>
   <button on:click={personale}>Personale</button>
 </div>
