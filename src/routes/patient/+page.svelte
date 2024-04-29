@@ -25,6 +25,8 @@
         });
         const res = await fetch('api/report/self');
         report = await res.json();
+
+        window.location.href = "/patient/kvittering";
     };
 
 </script>
@@ -33,10 +35,3 @@
 <input bind:value={dia} type="text" placeholder="Diastolisk blodtryk" />
 <button on:click={saveReport}>Send</button>
 
-
-{#each report as item}
-    <div>
-        <p>{item.sys}</p>
-        <p>{item.dia}</p>
-    </div>
-{/each}
