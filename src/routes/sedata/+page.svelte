@@ -29,7 +29,25 @@
     margin: 0;
     }
 
-    .container {
+    .container1 {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 50%;
+    }
+
+    .container2 {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 50%;
+    }
+
+    .container2 {
         text-align: center;
         background-color: #ffffff;
         padding: 20px;
@@ -59,20 +77,29 @@
     button:hover {
         background-color: #0056b3;
     }
+
+    .container2 button {
+        padding: 5px 10px;
+        font-size: 14px;
+        height: auto;
+        width: 30%;
+    }
+    
 </style>
 
-<div class="container">
+<div class="container1">
     <h1>Se patientdata</h1>
     <button on:click={getusers}>Vis patienter</button> <br><br>
     <button on:click={tilbage}>Tilbage</button> <br><br>
 </div>
 
-{#each users as user}
-    <button on:click={() => showData(user)}>
-        <p>{user.email}</p>
-    </button>
-    <br>
-{/each}
+<div class="container2">
+    {#each users as user}
+        <button on:click={() => showData(user)}>
+            <p>{user.email}</p>
+        </button>
+        <br>
+    {/each}
 
 {#if currentUserId}
     <h2>Data for {users.find(u => u.id === currentUserId).email}</h2>
@@ -81,3 +108,4 @@
         <p>{report.sys} / {report.dia}</p>
     {/each}
 {/if}
+</div>
