@@ -5,7 +5,7 @@ export async function handle({ event, resolve }) {
     console.log(event.cookies.get('token'));*/
     const path = event.url.pathname;
     const cookie = event.cookies.get('token');
-    if (['/', '/loginpersonale', '/loginpatient', '/api/login'].includes(path)) {
+    if (['/', '/loginpersonale', '/loginpatient', '/api/login', '/personale', '/sedata', '/patient/kvittering', '/patient'].includes(path)) {
         return await resolve(event);
     } else {
         if (cookie) {

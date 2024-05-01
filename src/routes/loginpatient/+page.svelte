@@ -17,6 +17,10 @@
         alert('Forkert brugernavn eller password');
       }
     };
+
+    function tilbage() {
+        window.location.href = "/";
+    }
 </script>
 
 <style>
@@ -77,4 +81,6 @@
     <input bind:value={username} type="text" placeholder="E-mail" />
     <input bind:value={password} type="password" placeholder="Adgangskode" />
     <button on:click={login}>Login</button>
+    <br>
+    <button on:click={tilbage}>Tilbage</button>
 </div>
