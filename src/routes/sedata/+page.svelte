@@ -29,31 +29,21 @@
     margin: 0;
     }
 
+    .container1, .container2 {
+        text-align: center;
+        background-color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+    }
+
     .container1 {
-        text-align: center;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
+        position:relative;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 50%;
     }
 
-    .container2 {
-        text-align: center;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 50%;
-    }
-
-    .container2 {
-        text-align: center;
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        width: 50%;
+    .container2{
+        margin-top: 20px;
     }
 
     h1 {
@@ -79,33 +69,39 @@
     }
 
     .container2 button {
-        padding: 5px 10px;
-        font-size: 14px;
-        height: auto;
-        width: 30%;
+        width: 100%;
+        margin-right: 20px;
+        font-size: 16px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff90;
+        color: #fff;
+        cursor: pointer;
     }
-    
+
 </style>
 
 <div class="container1">
     <h1>Se patientdata</h1>
     <button on:click={getusers}>Vis patienter</button> <br><br>
     <button on:click={tilbage}>Tilbage</button> <br><br>
-</div>
 
-<div class="container2">
-    {#each users as user}
-        <button on:click={() => showData(user)}>
-            <p>{user.email}</p>
-        </button>
-        <br>
-    {/each}
 
-{#if currentUserId}
-    <h2>Data for {users.find(u => u.id === currentUserId).email}</h2>
-    <h3>Blodtryk</h3>
-    {#each currentUserReports as report}
-        <p>{report.sys} / {report.dia}</p>
-    {/each}
-{/if}
+    <div class="container2">
+            {#each users as user}
+                <button on:click={() => showData(user)}>
+                    <p>{user.email}</p>
+                </button>
+                <br>
+            {/each}
+
+        {#if currentUserId}
+            <h2>Data for {users.find(u => u.id === currentUserId).email}</h2>
+            <h3>Blodtryk</h3>
+            {#each currentUserReports as report}
+                <p>{report.sys} / {report.dia}</p>
+            {/each}
+        {/if}
+    </div>
+
 </div>
