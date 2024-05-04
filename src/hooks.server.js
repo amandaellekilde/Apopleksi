@@ -1,11 +1,9 @@
 import jwt from 'jsonwebtoken';
 
 export async function handle({ event, resolve }) {
-    /*console.log(event.url.pathname);
-    console.log(event.cookies.get('token'));*/
     const path = event.url.pathname;
     const cookie = event.cookies.get('token');
-    if (['/', '/loginpersonale', '/loginpatient'].includes(path)) {
+    if (['/', '/loginpersonale', '/loginpatient', '/api/login'].includes(path)) {
         return await resolve(event);
     } else {
         if (cookie) {
